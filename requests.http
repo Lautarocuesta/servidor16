@@ -1,0 +1,27 @@
+###
+POST http://localhost:2700/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+"titulo":"monoss",
+"autor": "yo",
+"genero":"literario",
+"cantpaginas": "330",
+"año":"2023"
+}
+###
+GET http://localhost:2700/api/users HTTP/1.1
+
+###
+DELETE http://localhost:2700/api/users/:isbn HTTP/1.1
+### 
+PUT http://localhost:3000/api/users/id HTTP/1.1
+Content-Type: application/json
+{
+"titulo":"monos",
+"autor": "yo",
+"genero":"literario",
+"cantpaginas": "330",
+"año":"2023",
+"isbn": "12345678",
+}
