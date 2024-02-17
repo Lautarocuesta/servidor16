@@ -9,10 +9,6 @@ const app = express();
 app.get("/", (req, res) => {
     res.send("welcome to my api");
   });
-app.post('/api/users', (req, res) => {
-    // Aquí puedes manejar la lógica de tu solicitud POST
-    res.send('Solicitud POST recibida en /api/users');
-});
   //middleware
 app.use(express.json());
 app.use(userRoutes);

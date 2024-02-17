@@ -1,5 +1,5 @@
 ###
-POST http://localhost:2700/api/users HTTP/1.1
+POST http://localhost:3000/insertar HTTP/1.1
 Content-Type: application/json
 
 {
@@ -7,21 +7,25 @@ Content-Type: application/json
 "autor": "yo",
 "genero":"literario",
 "cantpaginas": "330",
-"año":"2023"
+"año":"2023",
+"isbn":"12131421315312"
 }
 ###
-GET http://localhost:2700/api/users HTTP/1.1
+GET http://localhost:3000/listar HTTP/1.1
+###
+GET http://localhost:3000/obtener/12131421315312 HTTP/1.1
 
 ###
-DELETE http://localhost:2700/api/users/:isbn HTTP/1.1
+DELETE http://localhost:3000/eliminar/12131421315312 HTTP/1.1
 ### 
-PUT http://localhost:3000/api/users/id HTTP/1.1
+PUT http://localhost:3000/modificar/12131421315312 HTTP/1.1
 Content-Type: application/json
+
 {
 "titulo":"monos",
 "autor": "yo",
 "genero":"literario",
 "cantpaginas": "330",
 "año":"2023",
-"isbn": "12345678",
+"isbn": "12131421315312"
 }
